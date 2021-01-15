@@ -12,13 +12,6 @@ body {
   padding: 1em;
 }
 
-fieldset {
-  border: solid 1px #d3d3d3;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-bottom: 2em;
-}
-
 p#language-list {
   text-align: center;
   margin: auto;
@@ -32,13 +25,25 @@ p#language-list span {
   margin-right: 1.25em;
 }
 
+fieldset {
+  border: solid 1px #d3d3d3;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 2em;
+}
+
 legend {
   padding-left: 10px;
   font-style: italic;
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 18px;
 }
 
 .form-group, .form-control, .form-check-inline {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .response-group {
@@ -53,6 +58,7 @@ legend {
   color: #0275d8;
   border: double 5px #d3d3d3;
   text-align: center;
+  padding: 10px;
   margin: auto;
   width: 33%;
 }
