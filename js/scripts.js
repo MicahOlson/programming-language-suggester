@@ -8,6 +8,8 @@ function sumAnswers(answers) {
 
 $(document).ready(function() {
   $("#questionnaire").submit(function(event) {
+    event.preventDefault();
+
     const name = $("input#name").val();
     const sign = $("select#zodiac").val();
     
@@ -18,30 +20,32 @@ $(document).ready(function() {
     const musketeer = parseInt($("input:radio[name=musketeer]:checked").val());
     const questionnaireAnswers = [animal, country, year, color, musketeer];
 
-    $(".page-body").hide();
-    $(".response-group").fadeIn();
-    
-    $("#response").text("We're very excited about your interest in programming, " + name + "! Given the wide range of languages and different programming domains, getting started is the hardest part. Based on your answers to the questionnaire, and being " + sign + ", we recommend you start with:");
+    if (!name || !sign || !animal || !country || !year || !color || !musketeer) {
+      alert("Oops, looks like the form is incomplete. Please fill out all fields and try again.")
+    } else {
+      $(".page-body").hide();
+      $(".response-group").fadeIn();
+      
+      $("#response").text("We're very excited about your interest in programming, " + name + "! Given the wide range of languages and different programming domains, getting started is the hardest part. Based on your answers to the questionnaire, and being " + sign + ", we recommend you start with:");
 
-    const answersSummed = sumAnswers(questionnaireAnswers);
-    if (answersSummed <= 40) {
-      result = "Ruby";
-    } else if (answersSummed > 40 && answersSummed <= 50) {
-      result = "C#";
-    } else if (answersSummed > 50 && answersSummed <= 60) {
-      result = "JavaScript";
-    } else if (answersSummed > 60 && answersSummed <= 70) {
-      result = "Go";
-    } else if (answersSummed > 70 && answersSummed <= 80) {
-      result = "Python";
-    } else if (answersSummed > 80 && answersSummed <= 90) {
-      result = "Rust";
-    } else if (answersSummed > 90 && answersSummed <= 100) {
-      result = "Swift";
+      const answersSummed = sumAnswers(questionnaireAnswers);
+      if (answersSummed <= 40) {
+        result = "Ruby";
+      } else if (answersSummed > 40 && answersSummed <= 50) {
+        result = "C#";
+      } else if (answersSummed > 50 && answersSummed <= 60) {
+        result = "JavaScript";
+      } else if (answersSummed > 60 && answersSummed <= 70) {
+        result = "Go";
+      } else if (answersSummed > 70 && answersSummed <= 80) {
+        result = "Python";
+      } else if (answersSummed > 80 && answersSummed <= 90) {
+        result = "Rust";
+      } else if (answersSummed > 90 && answersSummed <= 100) {
+        result = "Swift";
+      }
+
+      $("#result").text(result);
     }
-
-    $("#result").text(result);
-    
-    event.preventDefault();
   });
 });
