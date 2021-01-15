@@ -13,3 +13,8 @@ legend {
 .form-group, .form-control, .form-check-inline {
   margin-bottom: 20px;
 }
+
+.jumbotron {
+  background-color: #0275d8;
+  color: white;
+}
