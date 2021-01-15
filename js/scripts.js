@@ -18,9 +18,26 @@ $(document).ready(function() {
     const musketeer = parseInt($("input:radio[name=musketeer]:checked").val());
     const questionnaireAnswers = [animal, country, year, color, musketeer];
     
-    $("#response").text("We're very excited about your interest in programming, " + name + "! Given the wide range of languages and programming domains, getting started is the hardest part. Since you are " + sign + ", and based on your answers to the questionnaire, we recommend you start learning:");
+    $("#response").text("We're very excited about your interest in programming, " + name + "! Given the wide range of languages and different programming domains, getting started is the hardest part. Since you are " + sign + ", and based on your answers to the questionnaire, we recommend you start by learning:");
 
-    $("#result").text("Python!");
+    const answersSummed = sumAnswers(questionnaireAnswers);
+    if (answersSummed <= 40) {
+      result = "Ruby";
+    } else if (answersSummed > 40 && answersSummed <= 50) {
+      result = "C#";
+    } else if (answersSummed > 50 && answersSummed <= 60) {
+      result = "JavaScript";
+    } else if (answersSummed > 60 && answersSummed <= 70) {
+      result = "Go";
+    } else if (answersSummed > 70 && answersSummed <= 80) {
+      result = "Python";
+    } else if (answersSummed > 80 && answersSummed <= 90) {
+      result = "Rust";
+    } else if (answersSummed > 90 && answersSummed <= 100) {
+      result = "Swift";
+    }
+
+    $("#result").text(result + "!");
     
     event.preventDefault();
   });
