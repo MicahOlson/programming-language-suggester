@@ -51,5 +51,8 @@ legend {
   font-size: 150%;
   font-weight: bold;
   color: #0275d8;
+  border: double 5px #d3d3d3;
   text-align: center;
+  margin: auto;
+  width: 33%;
 }

@@ -26,7 +26,7 @@ $(document).ready(function() {
       $(".page-body").hide();
       $(".response-group").fadeIn();
       
-      $("#response").text("We're very excited about your interest in programming, " + name + "! Given the wide range of languages and different programming domains, getting started is the hardest part. Based on your answers to the questionnaire, and being " + sign + ", we recommend you start with:");
+      $("#response").text("We're very excited about your interest in programming, " + name + "! Given the wide range of languages and different programming domains, getting started is the hardest part. Based on your answers to the questionnaire, and being " + sign + " (that bit's just for fun!), we recommend you start with:");
 
       const answersSummed = sumAnswers(questionnaireAnswers);
       if (answersSummed <= 40) {
@@ -47,5 +47,9 @@ $(document).ready(function() {
 
       $("#result").text(result);
     }
+  });
+  $("button#go-back").click(function() {
+    $(".response-group").hide();
+    $(".page-body").fadeIn();
   });
 });
