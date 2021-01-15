@@ -1,12 +1,10 @@
 function sumResponses(responses) {
-  let result = 0;
+  let sum = 0;
   for (let i = 0; i < responses.length; i++) {
-    result += responses[i];
-  return result;
+    sum += responses[i];
   }
+  return sum;
 }
-
-console.log(sumResponses([1, 2, 3, 4, 5]));
 
 $(document).ready(function() {
   $("#questionnaire").submit(function(event) {
@@ -20,8 +18,6 @@ $(document).ready(function() {
     const musketeer = parseInt($("input:radio[name=musketeer]:checked").val());
     let questionnaireResponses = [animal, country, year, color, musketeer];
     
-    // console.log(questionnaireResponses);
-
     $("#result").text("We recommend you learn Python!");
     
     event.preventDefault();
