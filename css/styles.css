@@ -1,3 +1,17 @@
+body {
+  background-color: #ffffff;
+}
+
+.jumbotron {
+  background-color: #0275d8;
+  color: white;
+}
+
+.page-body, .response-group {
+  background-color: #f7f7f7;
+  padding: 1em;
+}
+
 fieldset {
   border: solid 1px #d3d3d3;
   padding-left: 20px;
@@ -14,7 +28,15 @@ legend {
   margin-bottom: 20px;
 }
 
-.jumbotron {
-  background-color: #0275d8;
-  color: white;
+.response-group {
+  display: none;
+  /* background-color: #f7f7f7;
+  padding: 1em; */
+}
+
+#result {
+  font-size: 150%;
+  font-weight: bold;
+  color: #0275d8;
+  text-align: center;
 }
