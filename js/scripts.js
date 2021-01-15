@@ -1,22 +1,26 @@
+function sumResponses(responses) {
+  let result = 0;
+  for (let i = 0; i < responses.length; i++) {
+    result += responses[i];
+  return result;
+  }
+}
+
+console.log(sumResponses([1, 2, 3, 4, 5]));
+
 $(document).ready(function() {
-  console.log("Script executing!")
   $("#questionnaire").submit(function(event) {
-    console.log("Submit form successfully reached.")
     const name = $("input#name").val();
     const sign = $("select#zodiac").val();
-    const animal = $("input:radio[name=animal]:checked").val();
-    const country = $("input:radio[name=country]:checked").val();
-    const year = $("input:radio[name=year]:checked").val();
-    const color = $("input:radio[name=color]:checked").val();
-    const musketeer = $("input:radio[name=musketeer]:checked").val();
     
-    console.log("Name: " + name);
-    console.log("Sign: " + sign);
-    console.log("Animal: " + animal);
-    console.log("Country: " + country);
-    console.log("Year: " + year);
-    console.log("Color: " + color);
-    console.log("Musketeer: " + musketeer);
+    const animal = parseInt($("input:radio[name=animal]:checked").val());
+    const country = parseInt($("input:radio[name=country]:checked").val());
+    const year = parseInt($("input:radio[name=year]:checked").val());
+    const color = parseInt($("input:radio[name=color]:checked").val());
+    const musketeer = parseInt($("input:radio[name=musketeer]:checked").val());
+    let questionnaireResponses = [animal, country, year, color, musketeer];
+    
+    // console.log(questionnaireResponses);
 
     $("#result").text("We recommend you learn Python!");
     
