@@ -1,7 +1,7 @@
-function sumResponses(responses) {
+function sumAnswers(answers) {
   let sum = 0;
-  for (let i = 0; i < responses.length; i++) {
-    sum += responses[i];
+  for (let i = 0; i < answers.length; i++) {
+    sum += answers[i];
   }
   return sum;
 }
@@ -16,9 +16,11 @@ $(document).ready(function() {
     const year = parseInt($("input:radio[name=year]:checked").val());
     const color = parseInt($("input:radio[name=color]:checked").val());
     const musketeer = parseInt($("input:radio[name=musketeer]:checked").val());
-    let questionnaireResponses = [animal, country, year, color, musketeer];
+    const questionnaireAnswers = [animal, country, year, color, musketeer];
     
-    $("#result").text("We recommend you learn Python!");
+    $("#response").text("We're very excited about your interest in programming, " + name + "! Given the wide range of languages and programming domains, getting started is the hardest part. Since you are " + sign + ", and based on your answers to the questionnaire, we recommend you start learning:");
+
+    $("#result").text("Python!");
     
     event.preventDefault();
   });
