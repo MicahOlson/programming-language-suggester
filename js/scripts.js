@@ -7,6 +7,8 @@ function sumAnswers(answers) {
 }
 
 $(document).ready(function() {
+  $('.carousel').carousel('cycle');
+
   $("#questionnaire").submit(function(event) {
     event.preventDefault();
 
