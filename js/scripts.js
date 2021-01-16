@@ -30,7 +30,8 @@ $(document).ready(function() {
       $(".page-body").hide();
       $(".response-group").fadeIn();
       
-      $("#response").text(name + ", we're very excited about your interest in programming! Given the wide range of languages and different programming domains, getting started is the hardest part. Based on your answers to the questionnaire, and being " + sign + " (that bit's just for fun!), we recommend you start with:");
+      $("#response-name").text(name);
+      $("#response-sign").text(sign);
 
       const answersSummed = sumAnswers(questionnaireAnswers);
       if (answersSummed <= 40) {
