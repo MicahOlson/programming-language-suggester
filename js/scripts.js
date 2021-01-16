@@ -24,38 +24,35 @@ $(document).ready(function() {
     const musketeer = parseInt($("input:radio[name=musketeer]:checked").val());
     const questionnaireAnswers = [animal, country, year, color, musketeer];
 
-    if (!name || !sign || !animal || !country || !year || !color || !musketeer) {
-      alert("Oops, looks like the form is incomplete. Please fill out all fields and try again.")
-    } else {
-      $(".page-body").hide();
-      $(".response-group").fadeIn();
- 
-      $("#response-name").text(name);
-      $("#response-sign").text(sign);
-     
-      $("#ruby-logo, #csharp-logo, #js-logo, #go-logo, #python-logo, #rust-logo, #swift-logo").hide();
-      
-      const answersSummed = sumAnswers(questionnaireAnswers);
-      let result;
-      if (answersSummed <= 40) {
-        result = "#ruby-logo";
-      } else if (answersSummed > 40 && answersSummed <= 50) {
-        result = "#csharp-logo";
-      } else if (answersSummed > 50 && answersSummed <= 60) {
-        result = "#js-logo";
-      } else if (answersSummed > 60 && answersSummed <= 70) {
-        result = "#go-logo";
-      } else if (answersSummed > 70 && answersSummed <= 80) {
-        result = "#python-logo";
-      } else if (answersSummed > 80 && answersSummed <= 90) {
-        result = "#rust-logo";
-      } else if (answersSummed > 90 && answersSummed <= 100) {
-        result = "#swift-logo";
-      }
+    $(".page-body").hide();
+    $(".response-group").fadeIn();
 
-      $(result).show();
+    $("#response-name").text(name);
+    $("#response-sign").text(sign);
+    
+    $("#ruby-logo, #csharp-logo, #js-logo, #go-logo, #python-logo, #rust-logo, #swift-logo").hide();
+    
+    const answersSummed = sumAnswers(questionnaireAnswers);
+    let result;
+    if (answersSummed <= 40) {
+      result = "#ruby-logo";
+    } else if (answersSummed > 40 && answersSummed <= 50) {
+      result = "#csharp-logo";
+    } else if (answersSummed > 50 && answersSummed <= 60) {
+      result = "#js-logo";
+    } else if (answersSummed > 60 && answersSummed <= 70) {
+      result = "#go-logo";
+    } else if (answersSummed > 70 && answersSummed <= 80) {
+      result = "#python-logo";
+    } else if (answersSummed > 80 && answersSummed <= 90) {
+      result = "#rust-logo";
+    } else if (answersSummed > 90 && answersSummed <= 100) {
+      result = "#swift-logo";
     }
+
+    $(result).show();
   });
+  
   $("button#go-back").click(function() {
     $(".response-group").hide();
     $(".page-body").fadeIn();
