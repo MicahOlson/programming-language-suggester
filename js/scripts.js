@@ -29,10 +29,12 @@ $(document).ready(function() {
     } else {
       $(".page-body").hide();
       $(".response-group").fadeIn();
-      
+ 
       $("#response-name").text(name);
       $("#response-sign").text(sign);
-
+     
+      $("#ruby-logo, #csharp-logo, #js-logo, #go-logo, #python-logo, #rust-logo, #swift-logo").hide();
+      
       const answersSummed = sumAnswers(questionnaireAnswers);
       let result;
       if (answersSummed <= 40) {

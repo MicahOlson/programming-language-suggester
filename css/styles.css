@@ -59,7 +59,3 @@ h5 {
   margin: auto;
   width: 33%;
 }
-
-#ruby-logo, #csharp-logo, #js-logo, #go-logo, #python-logo, #rust-logo, #swift-logo {
-  display: none;
-}
