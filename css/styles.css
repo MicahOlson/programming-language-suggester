@@ -48,15 +48,13 @@ h5 {
 
 .response-group {
   display: none;
-  /* background-color: #f7f7f7;
-  padding: 1em; */
 }
 
 #result {
   font-size: 150%;
   font-weight: bold;
   color: #0275d8;
-  border: double 5px #d3d3d3;
+  border-bottom: double 5px #d3d3d3;
   text-align: center;
   padding: 10px;
   margin: auto;
