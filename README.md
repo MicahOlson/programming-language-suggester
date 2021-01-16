@@ -33,7 +33,7 @@ Fill out a brief questionnaire and receive a personalized suggestion for a progr
 ## Known Bugs
 * No known bugs.
 * This project will be under regular development. If you  
-find a bug, please let know at the email address below. 
+find a bug, please let me know at the email address below. 
 
 ## License
 [GPL](https://choosealicense.com/licenses/gpl-3.0/)
