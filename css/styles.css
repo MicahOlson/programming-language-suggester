@@ -56,12 +56,10 @@ h5 {
 }
 
 #result {
-  font-size: 150%;
-  font-weight: bold;
-  color: #0275d8;
-  border-bottom: double 5px #d3d3d3;
-  text-align: center;
-  padding: 10px;
   margin: auto;
   width: 33%;
+}
+
+#ruby-logo, #csharp-logo, #js-logo, #go-logo, #python-logo, #rust-logo, #swift-logo {
+  display: none;
 }

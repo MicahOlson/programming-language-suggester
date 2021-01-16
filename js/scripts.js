@@ -34,23 +34,24 @@ $(document).ready(function() {
       $("#response-sign").text(sign);
 
       const answersSummed = sumAnswers(questionnaireAnswers);
+      let result;
       if (answersSummed <= 40) {
-        result = "Ruby";
+        result = "#ruby-logo";
       } else if (answersSummed > 40 && answersSummed <= 50) {
-        result = "C#";
+        result = "#csharp-logo";
       } else if (answersSummed > 50 && answersSummed <= 60) {
-        result = "JavaScript";
+        result = "#js-logo";
       } else if (answersSummed > 60 && answersSummed <= 70) {
-        result = "Go";
+        result = "#go-logo";
       } else if (answersSummed > 70 && answersSummed <= 80) {
-        result = "Python";
+        result = "#python-logo";
       } else if (answersSummed > 80 && answersSummed <= 90) {
-        result = "Rust";
+        result = "#rust-logo";
       } else if (answersSummed > 90 && answersSummed <= 100) {
-        result = "Swift";
+        result = "#swift-logo";
       }
 
-      $("#result").text(result);
+      $(result).show();
     }
   });
   $("button#go-back").click(function() {
