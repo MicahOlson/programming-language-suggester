@@ -7,7 +7,7 @@
   <script src="js/jquery-3.5.1.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/scripts.js"></script>
-  <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
   <link rel="stylesheet" href="css/styles.css" type="text/css">
   <title>Programming Language Suggester</title>
 </head>
@@ -116,7 +116,7 @@
             <label class="form-check-label" for="elephant">Elephant</label>
           </div>
 
-          <h6>Which country do you favor to win in soccer's next Women's World Cup?</h6>
+          <h6>Which country do you favor to win the next Women's World Cup in soccer?</h6>
           <div class="form-check form-check-inline">
             <input type="radio" class="form-check-input" id="brazil" name="country" value="6" required>
             <label class="form-check-label" for="brazil">Brazil</label>
@@ -179,7 +179,12 @@
     </div>
 
     <div class="response-group">
-      <p>We're very excited about your interest in programming, <span id="response-name"></span>! Given the wide range of languages and different domains out there, choosing where to begin is one of the hardest parts of programming. Based on your answers to the questionnaire, and being <span id="response-sign"></span> (that bit's actually just for fun!), we recommend you start by learning:</p>
+      <p>We're very excited about your interest in programming, 
+        <span id="response-name"></span>! Given the wide range of languages 
+        and different programming domains out there, choosing what to learn  
+        is one of the hardest steps to getting started. Based on your answers 
+        to the questionnaire, and being <span id="response-sign"></span> (that 
+        bit's actually just for fun!), we recommend you start by learning:</p>
       <p id="result">
         <img src="img/ruby-logo.png" alt="Ruby logo" class="w-100" id="ruby-logo">
         <img src="img/csharp-logo.png" alt="C-Sharp logo" class="w-100" id="csharp-logo">
