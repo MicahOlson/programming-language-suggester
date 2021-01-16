@@ -50,13 +50,12 @@ h5 {
   display: none;
 }
 
-#result {
-  font-size: 150%;
-  font-weight: bold;
+#response-name, #response-sign {
   color: #0275d8;
-  border-bottom: double 5px #d3d3d3;
-  text-align: center;
-  padding: 10px;
+  font-weight: bold;
+}
+
+#result {
   margin: auto;
   width: 33%;
 }

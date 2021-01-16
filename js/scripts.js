@@ -7,6 +7,10 @@ function sumAnswers(answers) {
 }
 
 $(document).ready(function() {
+  $('.carousel').carousel({
+    interval: 3500
+  });
+
   $("#questionnaire").submit(function(event) {
     event.preventDefault();
 
@@ -20,34 +24,35 @@ $(document).ready(function() {
     const musketeer = parseInt($("input:radio[name=musketeer]:checked").val());
     const questionnaireAnswers = [animal, country, year, color, musketeer];
 
-    if (!name || !sign || !animal || !country || !year || !color || !musketeer) {
-      alert("Oops, looks like the form is incomplete. Please fill out all fields and try again.")
-    } else {
-      $(".page-body").hide();
-      $(".response-group").fadeIn();
-      
-      $("#response").text(name + ", we're very excited about your interest in programming! Given the wide range of languages and different programming domains, getting started is the hardest part. Based on your answers to the questionnaire, and being " + sign + " (that bit's just for fun!), we recommend you start with:");
+    $(".page-body").hide();
+    $(".response-group").fadeIn();
 
-      const answersSummed = sumAnswers(questionnaireAnswers);
-      if (answersSummed <= 40) {
-        result = "Ruby";
-      } else if (answersSummed > 40 && answersSummed <= 50) {
-        result = "C#";
-      } else if (answersSummed > 50 && answersSummed <= 60) {
-        result = "JavaScript";
-      } else if (answersSummed > 60 && answersSummed <= 70) {
-        result = "Go";
-      } else if (answersSummed > 70 && answersSummed <= 80) {
-        result = "Python";
-      } else if (answersSummed > 80 && answersSummed <= 90) {
-        result = "Rust";
-      } else if (answersSummed > 90 && answersSummed <= 100) {
-        result = "Swift";
-      }
-
-      $("#result").text(result);
+    $("#response-name").text(name);
+    $("#response-sign").text(sign);
+    
+    $("#ruby-logo, #csharp-logo, #js-logo, #go-logo, #python-logo, #rust-logo, #swift-logo").hide();
+    
+    const answersSummed = sumAnswers(questionnaireAnswers);
+    let result;
+    if (answersSummed <= 40) {
+      result = "#ruby-logo";
+    } else if (answersSummed > 40 && answersSummed <= 50) {
+      result = "#csharp-logo";
+    } else if (answersSummed > 50 && answersSummed <= 60) {
+      result = "#js-logo";
+    } else if (answersSummed > 60 && answersSummed <= 70) {
+      result = "#go-logo";
+    } else if (answersSummed > 70 && answersSummed <= 80) {
+      result = "#python-logo";
+    } else if (answersSummed > 80 && answersSummed <= 90) {
+      result = "#rust-logo";
+    } else if (answersSummed > 90 && answersSummed <= 100) {
+      result = "#swift-logo";
     }
+
+    $(result).show();
   });
+  
   $("button#go-back").click(function() {
     $(".response-group").hide();
     $(".page-body").fadeIn();
