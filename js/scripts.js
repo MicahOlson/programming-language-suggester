@@ -11,6 +11,7 @@ $(document).ready(function() {
     interval: 3500
   });
 
+  let result;
   $("#questionnaire").submit(function(event) {
     event.preventDefault();
 
@@ -23,17 +24,8 @@ $(document).ready(function() {
     const color = parseInt($("input:radio[name=color]:checked").val());
     const musketeer = parseInt($("input:radio[name=musketeer]:checked").val());
     const questionnaireAnswers = [animal, country, year, color, musketeer];
-
-    $(".page-body").hide();
-    $(".response-group").fadeIn();
-
-    $("#response-name").text(name);
-    $("#response-sign").text(sign);
-    
-    $("#ruby-logo, #csharp-logo, #js-logo, #go-logo, #python-logo, #rust-logo, #swift-logo").hide();
     
     const answersSummed = sumAnswers(questionnaireAnswers);
-    let result;
     if (answersSummed <= 40) {
       result = "#ruby-logo";
     } else if (answersSummed > 40 && answersSummed <= 50) {
@@ -50,11 +42,17 @@ $(document).ready(function() {
       result = "#swift-logo";
     }
 
-    $(result).show();
+    $(".page-body").toggle();
+    $(".response-group").fadeToggle();
+
+    $("#response-name").text(name);
+    $("#response-sign").text(sign);
+    $(result).toggle();
   });
   
   $("button#go-back").click(function() {
-    $(".response-group").hide();
-    $(".page-body").fadeIn();
+    $(result).toggle();
+    $(".response-group").toggle();
+    $(".page-body").fadeToggle();
   });
 });
