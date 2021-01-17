@@ -15,7 +15,7 @@ body {
 p#language-list {
   text-align: center;
   margin: auto;
-  width: 65%;
+  width: 75%;
   margin-bottom: 2em;
 }
 
@@ -46,7 +46,7 @@ h5 {
   margin-bottom: 30px;
 }
 
-.response-group {
+.response-group, .result-logo {
   display: none;
 }
 
@@ -57,5 +57,5 @@ h5 {
 
 #result {
   margin: auto;
-  width: 33%;
+  width: 360px;
 }
