@@ -1,4 +1,4 @@
-# Programming Language Selector
+# Programming Language Suggester
 
 ### Suggests the right programming language for you.
 
