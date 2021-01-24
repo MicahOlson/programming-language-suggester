@@ -12,23 +12,27 @@
 ## Description
 Fill out a brief questionnaire and receive a personalized suggestion for a programming language matching your personality.
 
-## Setup/Installation Requirements
-* The web page can be viewed [here](https://micaholson.github.io/programming-language-suggester). To edit a local copy yourself, follow the instructions below:  
+## Setup and Installation
+* This project's interactive web page can be viewed [here](https://micaholson.github.io/programming-language-suggester).  
 
-* Use git to clone the project into your local directory of choice ([how to install git](https://www.learnhowtoprogram.com/introduction-to-programming/getting-started-with-intro-to-programming/git-and-github)):  
-  $ cd ~/\[directory-of-choice\]  
-  $ git clone https[]()://github.com/MicahOlson/programming-language-suggester.git  
+* To download, then view or edit a local copy yourself, follow the instructions below:  
 
-* Remove all remotes nicknamed 'origin' pointing to my repository:  
-  To view-  
-  $ git remote -v  
+  * Clone the repository to a local directory using the command-line tool `git` ([how to install git](https://www.learnhowtoprogram.com/introduction-to-programming/getting-started-with-intro-to-programming/git-and-github)).  
+    `$ cd ~/[directory]/[path]/[of]/[choice]/`  
+    `$ git clone https://github.com/MicahOlson/programming-language-suggester.git`  
+  
+  * Navigate to the top level of the project directory.  
+    `$ cd programming-language-suggester/`   
 
-  To remove-  
-  $ git remote rm origin  
-* Add new remotes pointing to your repositories of choice:  
-  $ git remote add \[location-nickname\] \[location\]  
+  * To view the site locally, open the file called `index.html` in your default browser.  
+    `$ open index.html`  
 
-* Open the files in your editor of choice and have fun!
+    * Alternatively, you can navigate to the project directory through your system's GUI file manager, then double-click `index.html` to open it in your default browser.  
+
+  * To edit the project, open the files in your preferred code editor. Here are some recommendations:
+    * [Visual Studio Code](https://code.visualstudio.com) - "Code editing. Redefined."
+    * [Atom](https://atom.io) - "A hackable text editor for the 21st Century"
+    * [SublimeText](https://www.sublimetext.com) - "A sophisticated text editor for code, markup and prose"
 
 ## Known Bugs
 * No known bugs.
@@ -36,7 +40,8 @@ Fill out a brief questionnaire and receive a personalized suggestion for a progr
 find a bug, please let me know at the email address below. 
 
 ## License
-[GPL](https://choosealicense.com/licenses/gpl-3.0/)
+[GPLv3](https://choosealicense.com/licenses/gpl-3.0/)\
+Copyright &copy; 2021 Micah L. Olson
 
 ## Contact Information
-Micah L. Olson micah@fakemail.com
+Micah Olson micah.olson@protonmail.com
