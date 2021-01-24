@@ -12,6 +12,8 @@
 ## Description
 Fill out a brief questionnaire and receive a personalized suggestion for a programming language matching your personality.
 
+<img src="img/readme-preview.png" alt="Screenshot of Programming Language Suggester"/>
+
 ## Setup and Installation
 * This project's interactive web page can be viewed [here](https://micaholson.github.io/programming-language-suggester).  
 
